@@ -3,23 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio</title>
+  <title>Portfólio | Tpex - Front-end Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <div class="topbar">
-    <img src="home-alt.svg" alt="home">
+  
+  <header class="topbar">
     <a href="#home">Home</a>
-    <img src="comment.svg" alt="by">
     <a href="#sobre">Sobre</a>
-    <img src="programming.png" alt="do" width="30px" height="30px">
     <a href="#projetos">Projetos</a>
-    <img src="toolbox.svg" alt="ferramentas">
     <a href="#habilidades">Habilidades</a>
-    <img src="phone.svg" alt="me">
     <a href="#contatos">Contato</a>
-  </div>
+  </header>
 
   <section id="home">
     <div class="home-content"> 
@@ -27,26 +23,32 @@
         <p>Olá, eu sou <strong>Tpex</strong>, desenvolvedor <strong>Front-end</strong> apaixonado por criar designs modernos.</p> 
     </div>
     
-    <img src="IMG_20251210_111109.jpg" alt="Imagem de Fundo Dark Street" class="home-image">
-</section>
+    <div class="home-image-wrapper">
+        <img src="IMG_20251210_111109.jpg" alt="Imagem de Fundo Dark Street" class="home-image">
+        
+        <img src="html.png" alt="Ícone HTML" class="tech-icon html-icon" width="70" height="70">
+        <img src="js.png" alt="Ícone JavaScript" class="tech-icon js-icon" width="70" height="70">
+        <img src="css-3(1).png" alt="Ícone CSS" class="tech-icon css-icon" width="70" height="70">
+    </div>
+  </section>
 
   <section id="sobre">
     <h2>Sobre mim</h2>
     <p>
       Sou curioso por natureza e acredito que tecnologia é uma ponte entre pessoas e 
-      inovações, e sobre impactar, engajar, aprender.
+      inovações. O foco é impactar, engajar e aprender.
      
-      sempre focando em desgin e Responsividade e SEO.
+      Sempre focando em design, Responsividade e SEO.
     </p>
     <p>
       Se tiver interesse, também trabalho com design de panfletos, cartões de visita, entre outros.
     </p>
-    <h3>Minha <section>Filosofia</section></h3>
+    <h3>Minha **Filosofia**</h3> 
     <p>Faça isso bonito</p>
   </section>
 
-  <section id="galeria">
-    <h2>Veja meus <strong>projetos</strong> para entender mais do meu trabalho</h2>
+  <section id="projetos">
+    <h2>Veja meus **projetos** para entender mais do meu trabalho</h2>
     <div class="galeria">
       <a href="projeto1.html" class="card">
         <img src="img/proj1.jpg" alt="Projeto 1">
@@ -69,19 +71,21 @@
       <li>Práticas: Design Responsivo, Acessibilidade, SEO básico</li>
     </ul>
     
-    <a href="desgin1" class="cardH">
-      <img src="ggg" alt="Design Gráfico">
-      <p>Design de Materiais Impressos</p>
+    <a href="desgincard" class="cardH">
+      <img src="ggg" alt="meus desgins">
+      <p>clique</p>
     </a>
   </section>
 
   <section id="contatos">
     <h2>Contato</h2>
-    <p>📧 Email: br.dev@gmail.com</p>
-    <p>🌐 LinkedIn: linkedin.com/in/brdev</p>
-    <p>💻 GitHub: github.com/brdev</p>
+    <p>📧 Email: **br.dev@gmail.com**</p>
+    <p>🌐 LinkedIn: **linkedin.com/in/brdev**</p>
+    <p>💻 GitHub: **github.com/brdev**</p>
   </section>
   
   <script src="index.js"></script>
+
+  <div class="barra"></div>
 </body>
 </html>

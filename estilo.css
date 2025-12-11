@@ -2,210 +2,34 @@
 body {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
-  background: #1B1B1B;
-  background: radial-gradient(circle, rgba(40, 40, 40, 1) 0%, rgba(27, 27, 27, 1) 90%);
-  color: #f0f0f0; /* Cor padrão do texto agora é quase branca para ler no fundo escuro */
+  background: gray;
+  color: #EAEAEA; 
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Topbar fixa */
 .topbar {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 0 auto;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-  border: 1px solid rgba(252, 70, 107, 0.5); /* Borda mais sutil */
-  background: rgba(27, 27, 27, 0.8); /* Fundo escuro translúcido para ler melhor os links */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 1% 2%; /* Ajuste de margem para centralizar com o width 94% */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
- 
-}
-
-.topbar a {
-  color: #FC466B;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.topbar a:hover {
-  color: #f0f0f0; /* Destaque em branco ao passar o mouse para melhor contraste */
-}
-
-/* Seções */
-#home {
-  padding: 5%;
-  width: 85%;
-  /* Gradiente Rosa -> Escuro */
-  background: linear-gradient(135deg, rgba(252, 70, 107, 1) 0%, rgb(20, 19, 19) 100%);
-  border-radius: 30px;
-  margin-top: 120px;
-  margin-bottom: 50px;
-  color: #1B1B1B; /* Corrigido para preto, melhor contraste no fundo rosa */
-  border: 1px solid #FC466B;
-  margin-left: auto;
-  margin-right: auto;
-  
-  /* --- MODIFICAÇÕES PARA ALINHAR TEXTO E IMAGEM --- */
-  display: flex;
-  justify-content: space-between; /* Espaça os elementos internos */
-  align-items: center; /* Alinha verticalmente ao centro */
-  gap: 20px; /* Espaçamento entre o texto e a imagem */
-  /* ------------------------------------------------ */
-}
-
-/* Estilo para a imagem dentro da seção Home */
-#home .home-image {
-  max-width: 40%; /* Limita o tamanho da imagem para que o texto também caiba */
-  height: auto;
-  border-radius: 15px;
-  border: 3px solid #1B1B1B; /* Borda escura para destacar */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilo para o texto dentro da seção Home */
-#home .home-content {
-    max-width: 55%; /* Dá espaço para o bloco de texto */
-}
-
-#sobre {
-  background: linear-gradient(135deg, rgb(20, 20, 20) 0%, rgba(252, 70, 107, 0.8) 100%);
-  border-radius: 20px;
-  text-align: left;
-  padding: 5%;
-  margin: 0 auto;
-  width: 85%;
-  color: #f0f0f0; /* Corrigido para branco/claro, melhor contraste no gradiente */
-  border: 1px solid #FC466B;
-  display: flex;
-  flex-direction: column;
-}
- #sobre h3 {
- width: 40%;
- height: 30% ;
-color: #FC466B;
-border-radius:15px ;
-padding: 10px;
-border: 1px solid rgba(252, 70, 107, 0.5); /* Borda mais sutil */
-  background: rgba(27, 27, 27, 0.8); /* Fundo escuro translúcido para ler melhor os links */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-margin-right: 10px;
- }
-/* Galeria */
-.galeria {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 5rem;
-  text-align: left;
-  padding: 5%;
-  color: #f0f0f0;
-  background-color: transparent;
-  margin-bottom: 10%;
-}
-
-/* Cards (Geral) */
-.card, .cardH {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin: 10px;
-  border-radius: 15px;
-  border: 1px solid rgba(252, 70, 107, 0.3);
-  backdrop-filter: blur(5px);
-  display: grid;
-}
-
-/* Títulos dentro dos cards (se houver h1, h2, h3) ficam rosa */
-.card h1, .card h2, .card h3,
-.cardH h1, .cardH h2, .cardH h3 {
-  color: #FC466B;
-}
-
-.card:hover, .cardH:hover {
-  transform: translateY(-5px);
-  border-color: #FC466B;
-  box-shadow: 0 10px 20px rgba(252, 70, 107, 0.2);
-}
-
-#contatos {
-  text-align: center;
-  color: #f0f0f0; /* Texto claro no fundo escuro */
-  padding: 50px;
-}
-/* Títulos de seção */
-#contatos h2, #galeria h2, #habilidades h2, #sobre h2 {
-    color: #FC466B;
-}
-/* Garantindo que o h1 no home seja visível */
-#home h1 {
-    color: #1B1B1B;
-}
-
-
-#habilidades {
-  background-color: #1B1B1B;
-  margin: 0 auto;
-  text-align: left;
-  border-radius: 20px;
-  color: #f0f0f0; /* Corrigido para texto claro nas habilidades */
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(252, 70, 107, 0.4);
-  width: 85%;
-  border: 1px solid rgba(252, 70, 107, 0.3);
-}
-
-#galeria {
-  color: #FC466B; /* Títulos da galeria em rosa */
-  text-align: center;
-}body {
-  margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  background: #1B1B1B;
-  /* Ajustei o gradiente para ficar mais sutil e não brigar com o conteúdo */
-  background: radial-gradient(circle, rgba(40, 40, 40, 1) 0%, rgba(27, 27, 27, 1) 90%);
-  color: #f0f0f0; /* Cor padrão do texto agora é quase branca para ler no fundo escuro */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Topbar fixa */
-.topbar {
-  position: fixed;
+  position:fixed;
   top: 0%;
   left: 0%;
   width: 94%;
   display: flex;
   justify-content: center;
   z-index: 1000;
-  border: 1px solid rgba(252, 70, 107, 0.5); /* Borda mais sutil */
-  background: rgba(27, 27, 27, 0.8); /* Fundo escuro translúcido para ler melhor os links */
+  border: 1px solid rgba(0, 0, 0, 0.5); 
+  background: rgba(129, 129, 129, 0.329); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
-  margin: 1% 2%; /* Ajuste de margem para centralizar com o width 94% */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+  margin: 1% 2%; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
 }
 
 .topbar a {
-  color: #FC466B;
+  color: #1b1b1b; 
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
@@ -213,170 +37,106 @@ html {
 }
 
 .topbar a:hover {
-  color: #f0f0f0; /* Destaque em branco ao passar o mouse para melhor contraste */
+  color: #EAEAEA; 
 }
 
-/* Seções */
 #home {
   padding: 5%;
   width: 85%;
-  /* Gradiente Rosa -> Escuro */
-  background: linear-gradient(135deg, rgba(252, 70, 107, 1) 0%, rgb(20, 19, 19) 100%);
+  background: #1b1b1b;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(34, 34, 34, 1) 100%, rgba(255, 255, 255, 1) 100%);
   border-radius: 30px;
   margin-top: 120px;
   margin-bottom: 50px;
-  color: #1B1B1B; /* Corrigido para preto, melhor contraste no fundo rosa */
-  border: 1px solid #FC466B;
+  color: #ffffff; 
+  border: 1px solid #ffffff;
   margin-left: auto;
   margin-right: auto;
   font-size: xx-large;
   
-  /* --- MODIFICAÇÕES PARA ALINHAR TEXTO E IMAGEM --- */
   display: flex;
-  justify-content: space-between; /* Espaça os elementos internos */
-  align-items: center; /* Alinha verticalmente ao centro */
-  gap: 20px; /* Espaçamento entre o texto e a imagem */
-  
+  justify-content: space-between; 
+  align-items: start; 
+  gap: 20px;
 }
 
+.home-image-wrapper {
+    max-width: 40%;
+    height: auto;
+    position: relative;
+}
 
 #home .home-image {
-  max-width: 40%; /* Limita o tamanho da imagem para que o texto também caiba */
+  max-width: 100%; 
   height: auto;
+  display: block;
   border-radius: 15px;
-  border: 3px solid #1B1B1B; /* Borda escura para destacar */
+  border: 3px solid #0A0A14; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.tech-icon {
+    position: absolute;
+    width: 70px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.5); 
+}
+
+.html-icon {
+    top: -30px;
+    left: -30px;
+}
+
+.js-icon {
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}
+
+.css-icon {
+    bottom: -30px;
+    right: -30px;
+}
 
 #home .home-content {
-    max-width: 55%; /* Dá espaço para o bloco de texto */
+    max-width: 55%; 
 }
 
 #sobre {
-  background: linear-gradient(135deg, rgb(20, 20, 20) 0%, rgba(252, 70, 107, 0.8) 100%);
-  border-radius: 20px;
-  text-align: left;
-  padding: 5%;
-  margin: 0 auto;
-  width: 85%;
-  color: #f0f0f0; /* Corrigido para branco/claro, melhor contraste no gradiente */
-  border: 1px solid #FC466B;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Galeria */
-.galeria {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-body {
-  margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  background: #1B1B1B;
-  /* Ajustei o gradiente para ficar mais sutil e não brigar com o conteúdo */
-  background: radial-gradient(circle, rgba(40, 40, 40, 1) 0%, rgba(27, 27, 27, 1) 90%);
-  color: #f0f0f0; /* Cor padrão do texto agora é quase branca para ler no fundo escuro */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Topbar fixa */
-.topbar {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 0 auto;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-  border: 1px solid rgba(252, 70, 107, 0.5); /* Borda mais sutil */
-  background: rgba(27, 27, 27, 0.8); /* Fundo escuro translúcido para ler melhor os links */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 1% 2%; /* Ajuste de margem para centralizar com o width 94% */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
- 
-}
-
-.topbar a {
-  color: #FC466B;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.topbar a:hover {
-  color: #f0f0f0; /* Destaque em branco ao passar o mouse para melhor contraste */
-}
-
-/* Seções */
-#home {
-  padding: 5%;
-  width: 85%;
-  /* Gradiente Rosa -> Escuro */
-  background: linear-gradient(135deg, rgba(252, 70, 107, 1) 0%, rgb(20, 19, 19) 100%);
+  background: #1b1b1b;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(34, 34, 34, 1) 100%, rgba(255, 255, 255, 1) 100%);
   border-radius: 30px;
   margin-top: 120px;
   margin-bottom: 50px;
-  color: #1B1B1B; /* Corrigido para preto, melhor contraste no fundo rosa */
-  border: 1px solid #FC466B;
-  margin-left: auto;
-  margin-right: auto;
-  
-  /* --- MODIFICAÇÕES PARA ALINHAR TEXTO E IMAGEM --- */
-  display: flex;
-  justify-content: space-between; /* Espaça os elementos internos */
-  align-items: center; /* Alinha verticalmente ao centro */
-  gap: 20px; /* Espaçamento entre o texto e a imagem */
-  /* ------------------------------------------------ */
-}
-
-/* Estilo para a imagem dentro da seção Home */
-#home .home-image {
-  max-width: 40%; /* Limita o tamanho da imagem para que o texto também caiba */
-  height: auto;
-  border-radius: 15px;
-  border: 3px solid #1B1B1B; /* Borda escura para destacar */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilo para o texto dentro da seção Home */
-#home .home-content {
-    max-width: 55%; /* Dá espaço para o bloco de texto */
-}
-
-#sobre {
-  background: linear-gradient(135deg, rgb(20, 20, 20) 0%, rgba(252, 70, 107, 0.8) 100%);
+  color: #ffffff; 
+  border: 1px solid #ffffff;
   border-radius: 20px;
-  text-align: left;
+  text-align:  center;
   padding: 5%;
   margin: 0 auto;
   width: 85%;
-  color: #f0f0f0; /* Corrigido para branco/claro, melhor contraste no gradiente */
-  border: 1px solid #FC466B;
   display: flex;
   flex-direction: column;
 }
+
  #sobre h3 {
  width: 40%;
  height: 30% ;
-color: #FC466B;
+color: #ffffff; 
 border-radius:15px ;
 padding: 10px;
-border: 1px solid rgba(252, 70, 107, 0.5); /* Borda mais sutil */
-  background: rgba(27, 27, 27, 0.8); /* Fundo escuro translúcido para ler melhor os links */
+border: 1px solid rgba(255, 255, 255, 0.5); 
+  background: rgba(32, 32, 32, 0.8); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 margin-right: 10px;
+margin: 0 auto;
  }
-/* Galeria */
+
+
 .galeria {
   display: flex;
   flex-direction: column;
@@ -384,293 +144,71 @@ margin-right: 10px;
   margin-top: 5rem;
   text-align: left;
   padding: 5%;
-  color: #f0f0f0;
+  color: #EAEAEA;
   background-color: transparent;
   margin-bottom: 10%;
 }
 
-/* Cards (Geral) */
+
 .card, .cardH {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #f0f0f0;
+  background: rgba(255, 255, 255, 0.05); 
+  color: #EAEAEA;
   text-decoration: none;
   transition: all 0.3s ease;
   margin: 10px;
   border-radius: 15px;
-  border: 1px solid rgba(252, 70, 107, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
   backdrop-filter: blur(5px);
   display: grid;
 }
 
-/* Títulos dentro dos cards (se houver h1, h2, h3) ficam rosa */
 .card h1, .card h2, .card h3,
 .cardH h1, .cardH h2, .cardH h3 {
-  color: #FC466B;
+  color: #ffffff; 
 }
 
 .card:hover, .cardH:hover {
   transform: translateY(-5px);
-  border-color: #FC466B;
-  box-shadow: 0 10px 20px rgba(252, 70, 107, 0.2);
+  border-color: #000000; 
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); 
 }
 
 #contatos {
   text-align: center;
-  color: #f0f0f0; /* Texto claro no fundo escuro */
+  color: #EAEAEA; 
   padding: 50px;
 }
-/* Títulos de seção */
+
 #contatos h2, #galeria h2, #habilidades h2, #sobre h2 {
-    color: #FC466B;
+    color: #ffffff; 
 }
-/* Garantindo que o h1 no home seja visível */
+
 #home h1 {
-    color: #1B1B1B;
+    color: #ffffff; 
 }
 
 
 #habilidades {
-  background-color: #1B1B1B;
+  background-color: #1b1b1b; 
   margin: 0 auto;
   text-align: left;
   border-radius: 20px;
-  color: #f0f0f0; /* Corrigido para texto claro nas habilidades */
+  color: #EAEAEA; 
   padding: 30px;
-  box-shadow: 0 0 20px rgba(252, 70, 107, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
   width: 85%;
-  border: 1px solid rgba(252, 70, 107, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #galeria {
-  color: #FC466B; /* Títulos da galeria em rosa */
-  text-align: center;
-}body {
-  margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  background: #1B1B1B;
-  /* Ajustei o gradiente para ficar mais sutil e não brigar com o conteúdo */
-  background: radial-gradient(circle, rgba(40, 40, 40, 1) 0%, rgba(27, 27, 27, 1) 90%);
-  color: #f0f0f0; /* Cor padrão do texto agora é quase branca para ler no fundo escuro */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Topbar fixa */
-.topbar {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 94%;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-  border: 1px solid rgba(252, 70, 107, 0.5); /* Borda mais sutil */
-  background: rgba(27, 27, 27, 0.8); /* Fundo escuro translúcido para ler melhor os links */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 1% 2%; /* Ajuste de margem para centralizar com o width 94% */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
-}
-
-.topbar a {
-  color: #FC466B;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.topbar a:hover {
-  color: #f0f0f0; /* Destaque em branco ao passar o mouse para melhor contraste */
-}
-
-/* Seções */
-#home {
-  padding: 5%;
-  width: 85%;
-  /* Gradiente Rosa -> Escuro */
-  background: linear-gradient(135deg, rgba(252, 70, 107, 1) 0%, rgb(20, 19, 19) 100%);
-  border-radius: 30px;
-  margin-top: 120px;
-  margin-bottom: 50px;
-  color: #1B1B1B; /* Corrigido para preto, melhor contraste no fundo rosa */
-  border: 1px solid #FC466B;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: xx-large;
-  
-  /* --- MODIFICAÇÕES PARA ALINHAR TEXTO E IMAGEM --- */
-  display: flex;
-  justify-content: space-between; /* Espaça os elementos internos */
-  align-items: center; /* Alinha verticalmente ao centro */
-  gap: 20px; /* Espaçamento entre o texto e a imagem */
-  
-}
-
-
-#home .home-image {
-  max-width: 40%; /* Limita o tamanho da imagem para que o texto também caiba */
-  height: auto;
-  border-radius: 15px;
-  border: 3px solid #1B1B1B; /* Borda escura para destacar */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-#home .home-content {
-    max-width: 55%; /* Dá espaço para o bloco de texto */
-}
-
-#sobre {
-  background: linear-gradient(135deg, rgb(20, 20, 20) 0%, rgba(252, 70, 107, 0.8) 100%);
-  border-radius: 20px;
-  text-align: left;
-  padding: 5%;
-  margin: 0 auto;
-  width: 85%;
-  color: #f0f0f0; /* Corrigido para branco/claro, melhor contraste no gradiente */
-  border: 1px solid #FC466B;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Galeria */
-.galeria {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 5rem;
-  text-align: left;
-  padding: 5%;
-  color: #f0f0f0;
-  background-color: transparent;
-  margin-bottom: 10%;
-}
-
-/* Cards (Geral) */
-.card, .cardH {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin: 10px;
-  border-radius: 15px;
-  border: 1px solid rgba(252, 70, 107, 0.3);
-  backdrop-filter: blur(5px);
-  display: grid;
-}
-
-/* Títulos dentro dos cards (se houver h1, h2, h3) ficam rosa */
-.card h1, .card h2, .card h3,
-.cardH h1, .cardH h2, .cardH h3 {
-  color: #FC466B;
-}
-
-.card:hover, .cardH:hover {
-  transform: translateY(-5px);
-  border-color: #FC466B;
-  box-shadow: 0 10px 20px rgba(252, 70, 107, 0.2);
-}
-
-#contatos {
-  text-align: center;
-  color: #f0f0f0; /* Texto claro no fundo escuro */
-  padding: 50px;
-}
-/* Títulos de seção */
-#contatos h2, #galeria h2, #habilidades h2, #sobre h2 {
-    color: #FC466B;
-}
-/* Garantindo que o h1 no home seja visível */
-#home h1 {
-    color: #1B1B1B;
-}
-
-
-#habilidades {
-  background-color: #1B1B1B;
-  margin: 0 auto;
-  text-align: left;
-  border-radius: 20px;
-  color: #f0f0f0; /* Corrigido para texto claro nas habilidades */
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(252, 70, 107, 0.4);
-  width: 85%;
-  border: 1px solid rgba(252, 70, 107, 0.3);
-}
-
-#galeria {
-  color: #FC466B; /* Títulos da galeria em rosa */
+  color: #4ECDC4; 
   text-align: center;
 }
-  margin-top: 5rem;
-  text-align: left;
-  padding: 5%;
-  color: #f0f0f0;
-  background-color: transparent;
-  margin-bottom: 10%;
-}
 
-/* Cards (Geral) */
-.card, .cardH {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin: 10px;
-  border-radius: 15px;
-  border: 1px solid rgba(252, 70, 107, 0.3);
-  backdrop-filter: blur(5px);
-  display: grid;
-}
-
-/* Títulos dentro dos cards (se houver h1, h2, h3) ficam rosa */
-.card h1, .card h2, .card h3,
-.cardH h1, .cardH h2, .cardH h3 {
-  color: #FC466B;
-}
-
-.card:hover, .cardH:hover {
-  transform: translateY(-5px);
-  border-color: #FC466B;
-  box-shadow: 0 10px 20px rgba(252, 70, 107, 0.2);
-}
-
-#contatos {
-  text-align: center;
-  color: #f0f0f0; /* Texto claro no fundo escuro */
-  padding: 50px;
-}
-/* Títulos de seção */
-#contatos h2, #galeria h2, #habilidades h2, #sobre h2 {
-    color: #FC466B;
-}
-/* Garantindo que o h1 no home seja visível */
-#home h1 {
-    color: #1B1B1B;
-}
-
-
-#habilidades {
-  background-color: #1B1B1B;
-  margin: 0 auto;
-  text-align: left;
-  border-radius: 20px;
-  color: #f0f0f0; /* Corrigido para texto claro nas habilidades */
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(252, 70, 107, 0.4);
-  width: 85%;
-  border: 1px solid rgba(252, 70, 107, 0.3);
-}
-
-#galeria {
-  color: #FC466B; /* Títulos da galeria em rosa */
-  text-align: center;
+.barra {
+  height: 2px;
+  width: 100%; 
+  background-color: #ffffff;
+  margin: 15px 0;
 }
